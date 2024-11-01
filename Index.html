@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <style>
+        .carousel-caption-custom {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            z-index: 10;
+            color: #fff;
+        }
+        .carousel-item img {
+            height: 100vh;
+            object-fit: cover;
+        }
+        .carousel-btn {
+            color: white;
+            text-decoration: none;
+        }
+        em {
+            color: #ff511a;
+        }
+        .carousel-caption-custom h2 {
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+        .carousel-caption-custom p {
+            font-size: 1.2rem;
+        }
+
+        .card1 img{
+            height: 300px;
+            object-fit: fill;
+            border-radius: 10px 10px;
+            
+        
+        }
+
+        .card1{
+            height: 500px;
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+            transition: all 0.3s ease;
+        }
+
+        .card1:hover{
+            transform: scale(1.001);
+            box-shadow: rgb(0 0 0 / 80%) 0px 2px 4px -1px, rgb(0 0 0 / 40%) 0px 4px 5px 0px, rgb(0 0 0 / 42%) 0px 1px 10px 0px;
+        }
+
+        .card1 h4{
+            color: #ff511a;
+            font-weight: 700;
+        }
+
+        .card1 p{
+            color: black;
+            font-weight: 500;
+        }
+
+        .text-primary{
+            color: rgb(69, 60, 60) !important;
+        }
+
+        .about p{
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color:#ff511a !important;
+            transition: all 0.7s ease;
+        }
+
+        @media screen and (max-width: 768px) {  
+            .carousel-caption-custom h2 {
+            font-size: 1.4rem !important;
+            line-height: 1 !important; 
+
+        }
+        
+        .carousel-caption-custom p {
+            font-size: 12px !important;
+        }
+        .card1{
+            height: auto !important;
+        }
+
+        .card1 img{
+            height: auto !important;
+        }
+.w50{
+    width: 100% !important;
+    padding-right:60px !important;
+}
+
+.g10{
+    gap:15px !important;
+}
+
+.f4{
+    font-size: 16px !important;
+}
+
+.bgd{
+    background-color: #ff511a !important;
+}
+
+        }
+       
+        .custom-shadow {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); 
+}
+       
+#about p{
+    color: rgb(16, 12, 12);
+}
+
+        /* Additional Styles */
+        
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (outside carousel) -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-shadow " style="background-attachment: fixed;">
+        <div class="container">
+
+
+            <a class="navbar-brand me-auto" href="#">
+                <img src="./assets/logo.png" alt="logo" class="logo">
+            </a>
+
+            <button class="navbar-toggler bgd" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse text-dark" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-dark fw-bolder fs-5" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark fw-bolder fs-5" href="#services">Service</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-dark fw-bolder fs-5"  href="#about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleInterval" class="carousel slide carousel-wrapper" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="./assets/slide-01.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption-custom w50" style="width: 50%;">
+                    <h2 >Get <em>ready</em> for MSME business<br>&amp; upgrade <em>all aspects</em></h2>
+                    <p>Solviser is set to provide solutions of All Micro, Small & Medium Enterprise “MSMEs” who have
+                      struggling from delayed payment, intentional delayed and fraudulent activities since long time ago,
+                      due to which the small and medium scale unit is either forced to exit the business or it is becoming
+                      a default.</p>
+                    <p >
+                      The founders of Solviser themselves have been in this field for 20 years and themselves faced the
+                      same problems, as a result the founders decided to find a solution to the most critical issues and
+                      today after 3 years of hard work and research they are presenting the solution to you.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-success carousel-btn fw-bolder">Discover More</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfB3xqF3bhMsSoRJZ9UptFt1wPPwE-J_uNkVbJiA4qVumk61Q/viewform?usp=sf_link" class="btn fw-bolder" style="background-color: #ff511a;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./assets/slide-02.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption-custom w50" style="width: 50%;">
+                    <h2><em>Digital</em> Presence for Empowering<br>MSMEs with Effective Solutions </h2>
+                    <p>The solutions presented by the SOLVISER'S will create a reliable environment in the market, no
+                      trader will be able to deliberately stop anyone's payment and at the same time payments will also be
+                      made on time, due to which the cash flow of the suppliers will not be disturbed and liquidity will
+                      be maintained in the market, fraud will be almost negligible, price inflections will also be less
+                      which will increase profitability, and the biggest benefit to the banking sector will be the control
+                      of NPAs, because this is the main basis of NPAs, if the borrower or his money is safe then the
+                      lenders will automatically be safe, because except for 1-2%, 95-98% NPAs are caused by these
+                      specified problems.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-success carousel-btn fw-bolder">Discover More</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfB3xqF3bhMsSoRJZ9UptFt1wPPwE-J_uNkVbJiA4qVumk61Q/viewform?usp=sf_link" class="btn fw-bolder" style="background-color: #ff511a;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./assets/slide-03.jpg" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption-custom w50" style="width: 50%;">
+                    <h2 >Empowering MSMEs Solutions<br>&amp; MSMEs <em>Services</em></h2>
+                  <div class="div-dec"></div>
+                  <p>Transforming challenges into opportunities for micro, small, and medium enterprises facing payment
+                    issues, Fraudulent activities and creating trustworthy market ecosystems.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-success carousel-btn fw-bolder">Discover More</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfB3xqF3bhMsSoRJZ9UptFt1wPPwE-J_uNkVbJiA4qVumk61Q/viewform?usp=sf_link" class="btn fw-bolder" style="background-color: #ff511a;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Services -->
+
+    <div class="container-fluid py-3" id="services">
+        <div class="container">
+            <h2 class="text-center py-2" style="font-size: 3rem;">Services</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card card1 p-4" data-aos="fade-down">
+                        <img src='./assets/Score Meternew.png' alt="score meter"  class="img-fluid"></img>
+                        <h4>AI Based Buyer Reputation & Risk Assessment system</h4>
+                        <p>The main purpose of the AI based buyer reputation & Risk Assessment system is allow to track buyer reputation, risk and buyers reputation score which will help sellers to know about buyer's business health and analyse the risk to reduce delayed payment.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card1 p-4" data-aos="fade-up">
+                        <img src="./assets/smart Contract.jpg" alt="smart contract" class="img-fluid"></img>
+                        <h4>Smart Contract</h4>
+                        <p>The Legal/Smart Contract is allow the buyer and seller to the lock and store their mutually agreed terms and conditions of the deal, which cannot be changed or manipulated once it is digitally signed by both the parties, which could be used as most supportive documents for the legal prospective in future.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card1 p-4" data-aos="fade-down">
+                        <img src="./assets/Blocked.jpg" class="img-fluid"></img>
+                        <h4>Centralized Buyer</h4>
+                        <p>The Centralized Buyer Blocklist allows suppliers to block buyers who are involved in a dispute with a seller or do not pay by any excuse. Such a buyer will be put on the blocklist due to which such merchant will not be able to buy goods from any other merchant across India until the previous merchant clears the account or resolves the old issues.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card1 p-4" data-aos="fade-up">
+                        <img src="./assets/Account.jpg" alt="loading" class="img-fluid">
+                        <h4>Automated Accounting & Delivery Systems.</h4>
+                        <p>Automated accounting systems that allow suppliers to automate their Invoice, quotations, POs, Payment Reminders and Accounting according to Legal/smart contract without any human interface, not only eliminating human errors but also saving vendors time which they would utilise to grow their business and improve quality etc.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card1 p-4" data-aos="fade-down">
+                        <img src="./assets/Ecommerce.jpg" alt="loading" class="img-fluid">
+                        <h4>E-commerce Page</h4>
+                        <p>On E-commerce page allow suppliers/buyers create their own products and service list to show their products across India.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card1 p-4" data-aos="fade-up">
+                        <img src="./assets/Peer.jpg" alt="loading" class="img-fluid">
+                        <h4>Peer to Peer Internal Supplier Network.</h4>
+            <p>Internal Suppliers Network is help to prevent price fluctuations. In this system, all the sellers of the Industry will be connected to the network and will keep an eye on the daily price fluctuations. Due to this, no trader will be able to sell goods at a lower rate outside his network, In the case of emergency sellers can offer to sale below price to network members only.</p>
+                    </div>
+                </div>
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="container-fluid py-5 " id="about">
+        <div class="container text-center about shadow-lg p-2">
+            <!-- About Section Title -->
+            <h2 class="display-5 fw-bold mb-4 text-primary">About SOLVISER</h2>
+            
+            <!-- About Section Content -->
+            <p class=" mb-5" data-aos="slide-down">At SOLVISER, we empower businesses by fostering a trustworthy and secure marketplace. Founded to support MSMEs, our mission is to address core challenges in buyer risk, delayed payments, fraudulent activities, automated accounting, and market uncertainty.</p>
+    
+            <div class="row gy-4 text-start">
+               
+                <div class="col-md-4" data-aos="slide-up">
+                    <p>Our platform integrates buyer reputation and risk assessment systems, automated legal support, and centralized buyer block lists, enabling businesses to make informed decisions and safeguard their interests.</p>
+                </div>
+               
+                <div class="col-md-4" data-aos="slide-up">
+                    <p>We understand the challenges of financial stability, especially for smaller businesses. Our tools for accounting automation, payment reminders, and peer-to-peer supplier networking streamline operations and strengthen business relationships.</p>
+                </div>
+            
+                <div class="col-md-4" data-aos="slide-down">
+                    <p>By partnering with SOLVISER, you join a network dedicated to reducing non-performing assets, fostering trust, and creating a secure environment for business transactions.</p>
+                </div>
+            </div>
+        
+            <div class="my-5" data-aos="slide-down">
+                <h2 class="text-primary fw-bolder">Our Vision</h2>
+                <p class="">To create a safer, more transparent marketplace that empowers MSMEs and fosters financial health across industries.</p>
+            </div>
+            
+            <div class="my-5">
+                <h2 class="text-primary fw-bolder">Our Mission</h2>
+                <p class="">To protect businesses from financial risks, including delayed payments, through innovative tools for reputation management, legal support, and market connectivity.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Testimonials -->
+
+
+    
+<div class="container-fluid p-3">
+    <div class="container">
+        
+        <h2 style="color:#1D3557" class="text-center">Testinomials</h2>
+<div class="row py-2 g10">
+        <div class="col-lg-4">
+        <div class="card p-3" style="background: #1D3557;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16" style="color:white">
+                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+              </svg>
+
+              <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+              <div class="d-flex g-2 align-items-center">
+                <img src="cs1.png" alt="loading..." class="img-fluid rounded-circle" width="50px" height="50px">
+                    <p class="text-white mx-2 my-2">Saif bhai jan<br>
+                     Business Manager</p>
+              </div>
+            
+        </div>
+
+
+
+        </div>
+        <div class="col-lg-4">
+            <div class="card p-3" style="background: #1D3557;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16" style="color:white">
+                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                  </svg>
+    
+                  <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                  <div class="d-flex g-2 align-items-center">
+                    <img src="cs2.png" alt="loading..." class="img-fluid rounded-circle" width="50px" height="50px">
+                        <p class="text-white mx-2 my-2">Priyanka giri<br> Business Manager</p>
+                  </div>
+                
+            </div>
+    
+    
+    
+            </div>
+            <div class="col-lg-4">
+                <div class="card p-3" style="background: #1D3557;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16" style="color:white">
+                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                      </svg>
+        
+                      <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                      <div class="d-flex g-2 align-items-center">
+                        <img src="cs3.png" alt="loading..." class="img-fluid rounded-circle" width="50px" height="50px">
+                            <p class="text-white mx-2 my-2">monu jain<br>
+                             Business Manager</p>
+                      </div>
+                    
+                </div>
+        
+        
+        
+                </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+
+    <div class="container-fluid p-2" style="background-color: #1D3557;">
+        <div class="container">
+            <h2 class="text-center fw-bolder fs-4 text-white f4">Copyright © Solviser India Pvt. Ltd.</h2>
+            <h2 class="text-center fw-bolder fs-4 text-white f4">Designed by <a href="https://crazywebdev.com/" style="text-decoration: none;color: #ff511a;">CrazyWebDev Technologies.</a></h2>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+  
+  offset: 300, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+ 
+
+});
+    </script>
+</body>
+</html>
