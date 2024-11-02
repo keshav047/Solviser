@@ -12,7 +12,7 @@
     <style>
         .carousel-caption-custom {
             position: absolute;
-            top: 10%;
+            top: 8%;
             left: 10%;
             z-index: 10;
             color: #fff;
@@ -30,10 +30,21 @@
         }
         .carousel-caption-custom h2 {
             font-size: 4rem;
-            line-height: 1.2;
+            line-height: 1.4;
         }
         .carousel-caption-custom p {
             font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .wsp h2{
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+
+        .wsp p{
+            font-size: 1.2rem;
+            line-height: 1.2;
         }
 
         .card1 img{
@@ -80,6 +91,26 @@
             transition: all 0.7s ease;
         }
 
+
+        .blockquote{
+            font-weight: 500;
+        }
+
+        .test{
+            background: #1D3557;
+            color: white !important;
+        }
+
+        .blockquote h2{
+            font-weight: 700;
+        }
+
+        .test:hover{
+            transform: scale(1.01);
+            box-shadow: rgb(0 0 0 / 80%) 0px 2px 4px -1px, rgb(0 0 0 / 40%) 0px 4px 5px 0px, rgb(0 0 0 / 42%) 0px 1px 10px 0px;
+            transition: all 0.5s ease;
+        }
+
         @media screen and (max-width: 768px) {  
             .carousel-caption-custom h2 {
             font-size: 1.4rem !important;
@@ -113,6 +144,14 @@
 .bgd{
     background-color: #ff511a !important;
 }
+
+.carousel-caption-custom {
+            position: absolute;
+            top: 8%;
+            left: 10%;
+            z-index: 10;
+            color: #fff;
+        }
 
         }
        
@@ -185,7 +224,7 @@
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="./assets/slide-02.jpg" class="d-block w-100" alt="Slide 2">
-                <div class="carousel-caption-custom w50" style="width: 50%;">
+                <div class="carousel-caption-custom w50 wsp" style="width: 50%;">
                     <h2><em>Digital</em> Presence for Empowering<br>MSMEs with Effective Solutions </h2>
                     <p>The solutions presented by the SOLVISER'S will create a reliable environment in the market, no
                       trader will be able to deliberately stop anyone's payment and at the same time payments will also be
@@ -327,70 +366,94 @@
 
 
     
-<div class="container-fluid p-3">
-    <div class="container">
-        
-        <h2 style="color:#1D3557" class="text-center">Testinomials</h2>
-<div class="row py-2 g10">
-        <div class="col-lg-4">
-        <div class="card p-3" style="background: #1D3557;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16" style="color:white">
-                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
-              </svg>
-
-              <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-              <div class="d-flex g-2 align-items-center">
-                <img src="cs1.png" alt="loading..." class="img-fluid rounded-circle" width="50px" height="50px">
-                    <p class="text-white mx-2 my-2">Saif bhai jan<br>
-                     Business Manager</p>
-              </div>
-            
+<!-- Bootstrap Carousel for Testimonials -->
+<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <h2 class="text-center py-2 fs-1">Testimonials</h2>
+    <div class="carousel-inner container ">
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active text-center p-4 " data-bs-interval="3000" data-aos="fade-up">
+            <blockquote class="blockquote card shadow-sm p-3 test">
+                <p class="mb-4 fw-bolder"> <h2>Reliable Risk Insights</h2>
+                    "With SOLVISER's buyer reputation and risk assessment, we feel more secure in our business relationships. The insights help us make informed decisions, and we've significantly reduced payment delays. SOLVISER is truly a game-changer for MSMEs!"  
+                  
+                    </p>
+                <footer class="blockquote-footer">  Rajesh Mehta, Founder of Mehta Manufacturing Solutions</footer>
+            </blockquote>
         </div>
 
-
-
-        </div>
-        <div class="col-lg-4">
-            <div class="card p-3" style="background: #1D3557;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16" style="color:white">
-                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
-                  </svg>
-    
-                  <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                  <div class="d-flex g-2 align-items-center">
-                    <img src="cs2.png" alt="loading..." class="img-fluid rounded-circle" width="50px" height="50px">
-                        <p class="text-white mx-2 my-2">Priyanka giri<br> Business Manager</p>
-                  </div>
-                
-            </div>
-    
-    
-    
-            </div>
-            <div class="col-lg-4">
-                <div class="card p-3" style="background: #1D3557;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16" style="color:white">
-                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
-                      </svg>
-        
-                      <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
-                      <div class="d-flex g-2 align-items-center">
-                        <img src="cs3.png" alt="loading..." class="img-fluid rounded-circle" width="50px" height="50px">
-                            <p class="text-white mx-2 my-2">monu jain<br>
-                             Business Manager</p>
-                      </div>
+        <!-- Testimonial 2 -->
+        <div class="carousel-item active text-center p-4 " data-bs-interval="2000" data-aos="fade-up">
+            <blockquote class="blockquote card shadow-sm p-3 test">
+                <p class="mb-4 fw-bolder"> <h2>Streamlined Payment Processes</h2>
+                    "Since implementing SOLVISER's payment reminder automation, our cash flow has improved, and we spend less time chasing payments. It's allowed us to focus more on growth and less on collections. Highly recommended for any MSME."  
+                   
                     
-                </div>
-        
-        
-        
-                </div>
-
-
-
+                    </p>
+                <footer class="blockquote-footer"> Priya Nair, CFO of Greenfield Supplies</footer>
+            </blockquote>
         </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item active text-center p-4 " data-bs-interval="2000" data-aos="fade-up">
+            <blockquote class="blockquote card shadow-sm p-3 test">
+                <p class="mb-4 fw-bolder"> <h2>Better Buyer Relationships</h2>
+                    "Thanks to SOLVISER’s centralized buyer block list and peer-to-peer network, we no longer feel forced to sell at low prices. We've been able to connect with reliable buyers and grow our network with confidence. SOLVISER is essential for market stability."  
+                    
+                    
+                    
+                    </p>
+                <footer class="blockquote-footer">Ankit Sharma, Owner of TimberTech</footer>
+            </blockquote>
+        </div>
+
+        <!-- Testimonial 4 -->
+
+        <div class="carousel-item active text-center p-4 " data-bs-interval="2000" data-aos="fade-up">
+            <blockquote class="blockquote card shadow-sm p-3 test">
+                <p class="mb-4 fw-bolder"> <h2> Effortless Legal Support</h2>
+                    "Managing contracts used to be a hassle until we found SOLVISER. Their automated legal contact service saves us time, money, and legal headaches. It’s like having a legal team on hand, 24/7!"  
+                    
+                    
+                    </p>
+                <footer class="blockquote-footer"> Neha Kapoor, Managing Director of Sunrise Textiles</footer>
+            </blockquote>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="carousel-item active text-center p-4 " data-bs-interval="2000" data-aos="fade-up">
+            <blockquote class="blockquote card shadow-sm p-3 test">
+                <p class="mb-4 fw-bolder"> <h2> E-commerce Success</h2>
+                    "Listing our products on SOLVISER’s platform has opened up new opportunities. The visibility we've gained helped us reach new clients and boost sales. It’s an excellent solution for MSMEs looking to grow online."  
+                    
+                    
+                    </p>
+                <footer class="blockquote-footer">Vivek Jain, Co-founder of WoodCraft Plywoods</footer>
+            </blockquote>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="carousel-item active text-center p-4 " data-bs-interval="2000" data-aos="fade-up">
+            <blockquote class="blockquote card shadow-sm p-3 test">
+                <p class="mb-4 fw-bolder"> <h2>Banking Confidence and Loan Approvals</h2>
+                    "Our bank now sees us as a low-risk client, thanks to SOLVISER's reputation and risk assessment. It’s made a real difference in securing loans for expansion. SOLVISER is a powerful ally for businesses seeking financial stability."  
+                   
+                    
+                    </p>
+                <footer class="blockquote-footer"> Ramesh Patel, CEO of Delta Furnishings</footer>
+            </blockquote>
+        </div>
+
+
     </div>
+
+    <!-- Carousel Controls -->
+   
 </div>
+
+
+   
+      
+      
 
 
     <!-- Footer -->
